@@ -3,13 +3,17 @@
 	margin: 0;
 	font-family: sans-serif;
 }
+a{
+	text-decoration: none;
+}
+
 #header{
-	
-	height: 300px;
+	height: 250px;
+	background-color: #333333;
 }
 #contact{
 	height: 40px;
-	background-color: #111111;
+	background-color: #222222;
 	max-height: 80px;
 }
 #contact #icon{
@@ -25,6 +29,8 @@
 	display: inline-block;
 	background-color: white;
 	margin-right: 0;
+	cursor: pointer;
+
 	
 }
 
@@ -35,7 +41,7 @@
 }
 
 #contact .icon-contact img:hover{
-	background-color: #33FFFF;
+	background-color: #666666;
 	opacity: 0.8;
 }
 #contact .icon-contact img:active{
@@ -47,22 +53,26 @@
 	margin:10px;
 	font-size: 14px;
 }
-hr.style{
-	background-color:  #BBBBBB;
 
-}
 
 #hello{
+	width: 400px;
 	
-	background-color: #111111;
-
+	/*border: 1px solid white;*/
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #333333;
+}
+#hello:hover{
+	opacity: 0.8;
 }
 #hello img{
 	width:100px;
 	height: 100px;	
 	border-radius: 50%;
 	margin-top: 10px;
-	margin-left:45%;
+	margin-left:36%;
 }
 #hello img:hover{
 	opacity: 0.8;
@@ -76,12 +86,12 @@ hr.style{
 	vertical-align: middle;
 }
 
-
 #contact-link{
 	display: inline-block;
 	position: fixed;
 	height: 268px;
 	top: 30%;
+	left: 12px;
 	width: 50px;
 	border: 1px solid #999999;
 	background-color: black;
@@ -91,7 +101,7 @@ hr.style{
 	display: inline-block;
 	width: 50px;
 	height: 40px;
-	
+	cursor: pointer;
 
 }
 #contact-link .icon-contact-link img{
@@ -100,28 +110,30 @@ hr.style{
 	width: 50px;
 	background-color:white;
 }
-#contact-link .icon-contact-link:hover{
-	
+#contact-link .icon-contact-link:hover{	
 	opacity: 0.5;
 }
 #contact-link .icon-contact-link:active{
 	opacity: 0.3;
 }
 
-#menu{
-	position: relative;
 
+div#menu{
+	position: sticky;
+	top: 0;
+	background-color: #222222;
 }
-
-#menu ul{
+#menu >ul{
 	display: inline-block;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom: 2px;
 	padding-left: 5px;
 	padding-right: 5px;
+	color: white;
 	
 }
-#menu ul li{
+#menu >ul >li{
 	
 	display: inline-block;
 	line-height: 60px;
@@ -130,9 +142,11 @@ hr.style{
 	padding-right: 10px;
 	border: 1px solid #CCCCCC;
 	margin: 0;
+	cursor: pointer;
+	border-radius: 10px;
 
 }
-#menu ul li a{
+#menu >ul >li a{
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
@@ -141,12 +155,85 @@ hr.style{
 }
 #menu ul li:hover{
 	
-	opacity: 0.3;
-	color: black;
+	opacity: 0.6;
+	
 }
 #menu ul li:active{
-	opacity: 0.1;
+	opacity: 0.3;
 	
-	color: black;
 }
 
+
+.drop-down{
+	position: relative;
+	
+}
+.drop-down-content{
+	position: absolute;
+	width: 800px;
+	height: 60px;
+	display: none;
+}
+.drop-down-content >li{
+	display: inline-block;
+	width: 150px;
+	height: 60px;
+	background-color: #111111;
+	text-align: center;
+	border-radius: 10px;
+
+}
+.drop-down:hover .drop-down-content{
+	display: block;
+}
+
+#container{
+	height: 800px;
+	width: 70%;
+	background-color: #CCCCCC;
+	margin: 10px 0 20px 70px;
+	border-radius: 10px;
+}
+#profile{
+	display: inline-block;
+	width: 65%;
+	height: 90%;
+	border: 0.3px solid black;
+	border-radius: 20px;
+	background-color: white;
+	margin-left: 2%;
+	margin-top: 20px;
+	box-shadow: 1px 1px 9px 5px #888888;
+	float: left;
+	padding-left: 30%;
+}
+#profile img{
+	width: 20px;
+	height: 20px;
+	border-color: black;
+	border-radius: 20px;
+	
+}
+#list-school li{
+	margin-left: 20px;
+	list-style-type: none;
+}
+#chat{
+	border: 3px solid #666666;
+	display: inline-block;
+	background-color: #DDDDDD;
+	float: right;
+	position: fixed;
+	right: 20px;
+	width: 22%;
+	height: 290px;
+	text-align: center;
+}
+#chat textarea{
+	width: 90%;
+	height: 220px;
+}
+#chating{
+	width: 90%;
+	height: 20px;
+}
